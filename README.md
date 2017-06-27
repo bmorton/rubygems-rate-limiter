@@ -15,8 +15,9 @@ occurs, but this scenario is reproducable.
 ```
 127.0.0.1 rubygems.org index.rubygems.org
 ```
-1. From within the `rubygems-rate-limiter` directory, pull the golang dependencies: `go get`
-1. From the same directory, run the proxy: `go build && sudo ./rubygems-rate-limiter`
+1. Pull down this repo: `go get github.com/bmorton/rubygems-rate-limiter`
+1. `cd $GOPATH/src/github.com/bmorton/rubygems-rate-limiter`
+1. Run the proxy: `go build && sudo ./rubygems-rate-limiter`
 1. From the same directory, run bundler: `bundle install --deployment --verbose`
 
 If you'd like to repro again, you'll need to restart the rate limiting proxy
